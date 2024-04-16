@@ -1,5 +1,7 @@
 I believe the general idea of the pipeline is outlined in challenge 1 and specially in challenge 3.
 
-In challenge 3 I have an endpoint called add-diamonds that adds a list of diamonds to the dataset. After accepting the request, it creates a background task to retrain the model with the new data while it keeps serving requests with the previous model. New diamonds are validated before adding them to the dataset. Before training, we do the preprocessing necessary outlined in challenge 1.
+In challenge 3 I have an endpoint called add-diamonds that adds a list of diamonds to the dataset. After accepting the request, it creates a background task to retrain the model with the new data while it keeps serving requests with the previous model. New diamonds are validated before adding them to the dataset. Before retraining, we do the preprocessing necessary outlined in challenge 1.
 
 Challenge 2 should be similar to this endpoint.
+
+I'm assuming the datasets will never grow too large so retraining should always be cheap. Alternatively, we can use stochastic gradient descent regression or a regressor from the Passive-Agressive family which are apt for online learning and sklearn supports these ML algorithms.
