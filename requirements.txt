@@ -1,0 +1,4 @@
+fastapi==0.110.1
+pandas==2.2.2
+pydantic==2.7.0
+scikit_learn==1.4.2

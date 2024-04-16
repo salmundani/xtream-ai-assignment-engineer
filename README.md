@@ -82,4 +82,14 @@ So, ready to add some sparkle to this challenge? Let's make these diamonds shine
 ---
 
 ## How to run
-Please fill this section as part of the assignment.
+
+All Python dependencies are specified in the `requirements.txt`. To install them, I recommend creating a virtual environment and then installing them:
+```
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+The first challenge was done in a Jupyter notebook. After installing the dependencies, select the virtual environment as the Python kernel to execute the cells.
+
+The third challenge's REST API was implemented using FastAPI. To run it locally, run `uvicorn challenge3:app`. It should start the service at [`localhost:8000`](http://127.0.0.1:8000) (unless the port is busy in which case it may use a different port). You can read the Swagger docs of the service in http://127.0.0.1:8000/docs after starting it.
